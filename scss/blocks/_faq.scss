@@ -1,0 +1,26 @@
+@use "../global/mixins" as *;
+
+.faq {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 672px;
+    gap: 69px;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46.8px;
+
+    @include vp-767 {
+      font-size: 24px;
+      line-height: 31.2px;
+    }
+  }
+}

@@ -1,0 +1,210 @@
+@use "../global/variables" as *;
+@use "../global/mixins" as *;
+
+.header {
+  &__top {
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $color-solitude;
+    position: relative;
+
+    @include vp-767 {
+      flex-wrap: wrap;
+      row-gap: 14px;
+      padding: 14px 0;
+    }
+  }
+
+  &__logo-link {
+    margin: 0 56px 0 0;
+
+    svg {
+      display: block;
+      height: 26px;
+      width: 140px;
+    }
+
+    @include vp-1023 {
+      margin-right: 24px;
+    }
+
+    @include vp-767 {
+      margin-right: 16px;
+
+      svg {
+        height: 20px;
+        width: 108px;
+      }
+    }
+  }
+
+  &__catalog-btn {
+    background-color: transparent;
+    border: 1px solid $color-granny-smith-apple;
+    border-radius: 6px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 40px 0 0;
+
+    @include vp-1023 {
+      margin-right: 24px;
+    }
+
+    @include vp-767 {
+      margin-right: 0;
+      padding: 9px;
+    }
+  }
+
+  &__catalog-text {
+    font-size: 14px;
+    line-height: 19.6px;
+
+    @include vp-767 {
+      @include visually-hidden;
+    }
+  }
+
+  &__location {
+    @include vp-767 {
+      order: 1;
+      width: 100%;
+    }
+  }
+
+  &__user-list {
+    margin: 0 0 0 auto;
+    display: flex;
+    padding: 0;
+    list-style: none;
+    gap: 20px;
+    position: relative;
+
+    // На телефоне корзина растягивается на ширину шапки, а не списка кнопок
+    @include vp-767 {
+      position: static;
+    }
+  }
+
+  &__user-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 16.8px;
+    gap: 5px;
+    position: relative;
+
+    svg {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  &__user-text {
+    @include vp-767 {
+      @include visually-hidden;
+    }
+  }
+
+  &__user-count {
+    height: 20px;
+    min-width: 20px;
+    padding: 0 2px;
+    border-radius: 10px;
+    background-color: $color-granny-smith-apple;
+    position: absolute;
+    top: -5px;
+    right: -13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $color-white;
+  }
+
+  &__bottom {
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @include vp-1023 {
+      flex-wrap: wrap;
+      row-gap: 14px;
+    }
+
+    @include vp-767 {
+      padding: 14px 0;
+    }
+  }
+
+  &__nav {
+    min-width: 0;
+
+    // На узких экранах меню прокручивается по горизонтали
+    @include vp-1023 {
+      width: 100%;
+      overflow-x: auto;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include vp-1023 {
+      gap: 24px;
+      width: max-content;
+    }
+  }
+
+  &__nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+    white-space: nowrap;
+    transition: color $transition;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-fern;
+    }
+  }
+
+  &__contacts {
+    margin: 0 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include vp-1023 {
+      margin: 0;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &__btn {
+    width: 170px;
+  }
+
+  &__phone {
+    font-size: 14px;
+    line-height: 19.6px;
+    white-space: nowrap;
+  }
+}

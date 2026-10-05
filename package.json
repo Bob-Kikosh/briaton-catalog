@@ -1,0 +1,16 @@
+{
+  "name": "briaton-catalog",
+  "version": "1.0.0",
+  "description": "Страница каталога интернет-магазина светильников Briaton: фильтры, сортировка, пагинация и корзина на чистом JavaScript",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "serve -l 3000 .",
+    "build": "sass scss/style.scss css/style.css --style=compressed",
+    "watch": "sass --watch scss/style.scss css/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.93.2",
+    "serve": "^14.2.5"
+  }
+}

@@ -1,0 +1,126 @@
+@use "../global/variables" as *;
+@use "../global/mixins" as *;
+
+.catalog {
+  &__title {
+    margin: 0 0 44px 0;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 54.6px;
+
+    @include vp-767 {
+      margin-bottom: 24px;
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    gap: 40px;
+    margin: 0 0 80px 0;
+    align-items: start;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__products {
+    min-width: 0;
+  }
+
+  &__sort {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+
+    @include vp-767 {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__sort-text {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+  }
+
+  &__sort-select {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: $color-granny-smith-apple;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__list {
+    margin: 0 0 40px;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 40px;
+
+    @include vp-767 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px 12px;
+    }
+  }
+
+  // Сообщение на месте списка: ничего не найдено или ошибка загрузки
+  &__empty {
+    grid-column: 1 / -1;
+    padding: 60px 0;
+    font-size: 18px;
+    line-height: 25.2px;
+    text-align: center;
+    color: $color-dim-gray;
+  }
+
+  &__pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 10px;
+  }
+
+  &__pagination-link {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 25.2px;
+    color: $color-black;
+    transition: opacity $transition, background-color $transition;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &--active {
+      background-color: $color-granny-smith-apple;
+      font-weight: 600;
+      pointer-events: none;
+    }
+  }
+}

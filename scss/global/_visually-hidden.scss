@@ -1,0 +1,5 @@
+@use "mixins" as *;
+
+.visually-hidden {
+  @include visually-hidden;
+}

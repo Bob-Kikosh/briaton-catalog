@@ -1,0 +1,170 @@
+@use "../global/variables" as *;
+@use "../global/mixins" as *;
+
+.basket {
+  background-color: $color-white;
+  border-radius: 8px;
+  padding: 16px;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 18px);
+  width: 400px;
+  box-shadow: $shadow-popup;
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  transition: opacity $transition, transform $transition;
+  visibility: hidden;
+  z-index: 10;
+
+  @include vp-767 {
+    left: 0;
+    top: calc(100% + 8px);
+    width: auto;
+  }
+
+  &--active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+    visibility: visible;
+  }
+
+  &__empty-block {
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: min(60vh, 420px);
+    overflow-y: auto;
+  }
+
+  &__item {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 60px 1fr auto 20px;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+
+    @include vp-767 {
+      gap: 12px;
+    }
+  }
+
+  &__img {
+    align-items: flex-start;
+    background-color: $color-white-smoke;
+    border-radius: 6px;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    width: 60px;
+    overflow: hidden;
+
+    img {
+      height: 60px;
+      object-fit: contain;
+      width: 60px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  &__counter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__counter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid $color-solitude;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1;
+    transition: border-color $transition;
+
+    &:hover,
+    &:focus-visible {
+      border-color: $color-fern;
+    }
+  }
+
+  &__count {
+    min-width: 20px;
+    text-align: center;
+  }
+
+  &__price {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  &__close {
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity $transition;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover,
+    &:focus-visible {
+      opacity: 0.6;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid $color-solitude;
+
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  &__total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.2px;
+  }
+
+  &__link {
+    width: 100%;
+  }
+}
