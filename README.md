@@ -4,7 +4,7 @@
 
 A catalog page for an online lighting store. Products are loaded from JSON and can be filtered, sorted, paginated and added to a cart. Built with vanilla JavaScript, no frameworks.
 
-<!-- After publishing on GitHub Pages, put the link here: **[Live demo](https://USERNAME.github.io/briaton-catalog/)** -->
+**[Live demo](https://bob-kikosh.github.io/briaton-catalog/)**
 
 ![Catalog on desktop](docs/desktop.png)
 
