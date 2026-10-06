@@ -1,341 +1,399 @@
 [
   {
     "id": 1,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 11540,
-      "old": 15300
+      "new": 115,
+      "old": 153
     },
     "image": "images/item-1.png",
     "availability": {
-      "moscow": 10,
-      "orenburg": 20,
-      "saintPetersburg": 17
+      "newYork": 10,
+      "chicago": 20,
+      "losAngeles": 17
     },
-    "type": ["pendant", "nightlights"],
+    "type": [
+      "pendant",
+      "nightlights"
+    ],
     "rating": 30,
     "goodsOfDay": true
   },
   {
     "id": 2,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 10540,
-      "old": 17300
+      "new": 105,
+      "old": 173
     },
     "image": "images/item-2.png",
     "availability": {
-      "moscow": 0,
-      "orenburg": 0,
-      "saintPetersburg": 0
+      "newYork": 0,
+      "chicago": 0,
+      "losAngeles": 0
     },
-    "type": ["pendant", "nightlights"],
+    "type": [
+      "pendant",
+      "nightlights"
+    ],
     "rating": 450,
     "goodsOfDay": false
   },
   {
     "id": 3,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 14555,
-      "old": 22300
+      "new": 146,
+      "old": 223
     },
     "image": "images/item-3.png",
     "availability": {
-      "moscow": 10,
-      "orenburg": 20,
-      "saintPetersburg": 17
+      "newYork": 10,
+      "chicago": 20,
+      "losAngeles": 17
     },
-    "type": ["pendant", "overhead", "point"],
+    "type": [
+      "pendant",
+      "overhead",
+      "point"
+    ],
     "rating": 11,
     "goodsOfDay": true
   },
   {
     "id": 4,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 6540,
-      "old": 10300
+      "new": 65,
+      "old": 103
     },
     "image": "images/item-4.png",
     "availability": {
-      "moscow": 0,
-      "orenburg": 0,
-      "saintPetersburg": 0
+      "newYork": 0,
+      "chicago": 0,
+      "losAngeles": 0
     },
-    "type": ["pendant", "ceiling"],
+    "type": [
+      "pendant",
+      "ceiling"
+    ],
     "rating": 285,
     "goodsOfDay": false
   },
   {
     "id": 5,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 8540,
-      "old": 12300
+      "new": 85,
+      "old": 123
     },
     "image": "images/item-5.png",
     "availability": {
-      "moscow": 10,
-      "orenburg": 20,
-      "saintPetersburg": 17
+      "newYork": 10,
+      "chicago": 20,
+      "losAngeles": 17
     },
-    "type": ["pendant", "ceiling", "overhead"],
+    "type": [
+      "pendant",
+      "ceiling",
+      "overhead"
+    ],
     "rating": 23,
     "goodsOfDay": true
   },
   {
     "id": 6,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 17540,
-      "old": 27300
+      "new": 175,
+      "old": 273
     },
     "image": "images/item-6.png",
     "availability": {
-      "moscow": 15,
-      "orenburg": 25,
-      "saintPetersburg": 13
+      "newYork": 15,
+      "chicago": 25,
+      "losAngeles": 13
     },
-    "type": ["pendant", "nightlights"],
+    "type": [
+      "pendant",
+      "nightlights"
+    ],
     "rating": 75,
     "goodsOfDay": false
   },
   {
     "id": 7,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 12540,
-      "old": 16300
+      "new": 125,
+      "old": 163
     },
     "image": "images/item-7.png",
     "availability": {
-      "moscow": 10,
-      "orenburg": 20,
-      "saintPetersburg": 17
+      "newYork": 10,
+      "chicago": 20,
+      "losAngeles": 17
     },
-    "type": ["nightlights"],
+    "type": [
+      "nightlights"
+    ],
     "rating": 79,
     "goodsOfDay": true
   },
   {
     "id": 8,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 12999,
-      "old": 17300
+      "new": 130,
+      "old": 173
     },
     "image": "images/item-8.png",
     "availability": {
-      "moscow": 0,
-      "orenburg": 0,
-      "saintPetersburg": 0
+      "newYork": 0,
+      "chicago": 0,
+      "losAngeles": 0
     },
-    "type": ["pendant", "ceiling"],
+    "type": [
+      "pendant",
+      "ceiling"
+    ],
     "rating": 97,
     "goodsOfDay": false
   },
   {
     "id": 9,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 18540,
-      "old": 19800
+      "new": 185,
+      "old": 198
     },
     "image": "images/item-9.png",
     "availability": {
-      "moscow": 10,
-      "orenburg": 20,
-      "saintPetersburg": 17
+      "newYork": 10,
+      "chicago": 20,
+      "losAngeles": 17
     },
-    "type": ["overhead"],
+    "type": [
+      "overhead"
+    ],
     "rating": 99,
     "goodsOfDay": true
   },
   {
     "id": 10,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 12540,
-      "old": 14300
+      "new": 125,
+      "old": 143
     },
     "image": "images/item-10.png",
     "availability": {
-      "moscow": 15,
-      "orenburg": 112,
-      "saintPetersburg": 13
+      "newYork": 15,
+      "chicago": 112,
+      "losAngeles": 13
     },
-    "type": ["pendant", "nightlights"],
+    "type": [
+      "pendant",
+      "nightlights"
+    ],
     "rating": 123,
     "goodsOfDay": false
   },
   {
     "id": 11,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 10540,
-      "old": 17300
+      "new": 105,
+      "old": 173
     },
     "image": "images/item-11.png",
     "availability": {
-      "moscow": 10,
-      "orenburg": 20,
-      "saintPetersburg": 17
+      "newYork": 10,
+      "chicago": 20,
+      "losAngeles": 17
     },
-    "type": ["pendant"],
+    "type": [
+      "pendant"
+    ],
     "rating": 58,
     "goodsOfDay": true
   },
   {
     "id": 12,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 11540,
-      "old": 13300
+      "new": 115,
+      "old": 133
     },
     "image": "images/item-12.png",
     "availability": {
-      "moscow": 0,
-      "orenburg": 0,
-      "saintPetersburg": 0
+      "newYork": 0,
+      "chicago": 0,
+      "losAngeles": 0
     },
-    "type": ["pendant"],
+    "type": [
+      "pendant"
+    ],
     "rating": 584,
     "goodsOfDay": false
   },
   {
     "id": 13,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 22540,
-      "old": 32300
+      "new": 225,
+      "old": 323
     },
     "image": "images/item-13.png",
     "availability": {
-      "moscow": 10,
-      "orenburg": 20,
-      "saintPetersburg": 17
+      "newYork": 10,
+      "chicago": 20,
+      "losAngeles": 17
     },
-    "type": ["point", "nightlights"],
+    "type": [
+      "point",
+      "nightlights"
+    ],
     "rating": 125,
     "goodsOfDay": true
   },
   {
     "id": 14,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 14540,
-      "old": 15300
+      "new": 145,
+      "old": 153
     },
     "image": "images/item-14.png",
     "availability": {
-      "moscow": 15,
-      "orenburg": 25,
-      "saintPetersburg": 13
+      "newYork": 15,
+      "chicago": 25,
+      "losAngeles": 13
     },
-    "type": ["pendant"],
+    "type": [
+      "pendant"
+    ],
     "rating": 536,
     "goodsOfDay": false
   },
   {
     "id": 15,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 18540,
-      "old": 25300
+      "new": 185,
+      "old": 253
     },
     "image": "images/item-15.png",
     "availability": {
-      "moscow": 10,
-      "orenburg": 20,
-      "saintPetersburg": 17
+      "newYork": 10,
+      "chicago": 20,
+      "losAngeles": 17
     },
-    "type": ["pendant", "nightlights"],
+    "type": [
+      "pendant",
+      "nightlights"
+    ],
     "rating": 364,
     "goodsOfDay": true
   },
   {
     "id": 16,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 19540,
-      "old": 24300
+      "new": 195,
+      "old": 243
     },
     "image": "images/item-16.png",
     "availability": {
-      "moscow": 15,
-      "orenburg": 228,
-      "saintPetersburg": 13
+      "newYork": 15,
+      "chicago": 228,
+      "losAngeles": 13
     },
-    "type": ["ceiling"],
+    "type": [
+      "ceiling"
+    ],
     "rating": 30,
     "goodsOfDay": false
   },
   {
     "id": 17,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 8540,
-      "old": 15300
+      "new": 85,
+      "old": 153
     },
     "image": "images/item-1.png",
     "availability": {
-      "moscow": 10,
-      "orenburg": 20,
-      "saintPetersburg": 17
+      "newYork": 10,
+      "chicago": 20,
+      "losAngeles": 17
     },
-    "type": ["pendant", "ceiling", "nightlights"],
+    "type": [
+      "pendant",
+      "ceiling",
+      "nightlights"
+    ],
     "rating": 312,
     "goodsOfDay": true
   },
   {
     "id": 18,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 6540,
-      "old": 14300
+      "new": 65,
+      "old": 143
     },
     "image": "images/item-2.png",
     "availability": {
-      "moscow": 15,
-      "orenburg": 25,
-      "saintPetersburg": 13
+      "newYork": 15,
+      "chicago": 25,
+      "losAngeles": 13
     },
-    "type": ["pendant", "nightlights"],
+    "type": [
+      "pendant",
+      "nightlights"
+    ],
     "rating": 318,
     "goodsOfDay": false
   },
   {
     "id": 19,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 10540,
-      "old": 18300
+      "new": 105,
+      "old": 183
     },
     "image": "images/item-3.png",
     "availability": {
-      "moscow": 10,
-      "orenburg": 20,
-      "saintPetersburg": 17
+      "newYork": 10,
+      "chicago": 20,
+      "losAngeles": 17
     },
-    "type": ["overhead", "point", "nightlights"],
+    "type": [
+      "overhead",
+      "point",
+      "nightlights"
+    ],
     "rating": 87,
     "goodsOfDay": true
   },
   {
     "id": 20,
-    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "name": "Ornella A4059PL-4AB ceiling chandelier (Artelamp)",
     "price": {
-      "new": 12240,
-      "old": 17800
+      "new": 122,
+      "old": 178
     },
     "image": "images/item-4.png",
     "availability": {
-      "moscow": 15,
-      "orenburg": 25,
-      "saintPetersburg": 13
+      "newYork": 15,
+      "chicago": 25,
+      "losAngeles": 13
     },
-    "type": ["pendant", "ceiling"],
+    "type": [
+      "pendant",
+      "ceiling"
+    ],
     "rating": 378,
     "goodsOfDay": false
   }

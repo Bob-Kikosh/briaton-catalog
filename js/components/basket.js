@@ -11,8 +11,8 @@ const emptyBlock = document.querySelector('.basket__empty-block');
 const footer = document.querySelector('.basket__footer');
 const totalPrice = document.querySelector('.basket__total-price');
 
-// Позиции корзины: { id, quantity }. Сами товары берём из каталога по id,
-// чтобы цена и название в корзине не расходились с данными.
+// Basket entries: { id, quantity }. Products are looked up in the catalog by id,
+// so the name and price in the basket never drift from the data.
 let basket = [];
 
 export function initBasket() {
@@ -33,7 +33,7 @@ export function initBasket() {
       return;
     }
 
-    // Клик мимо корзины закрывает её
+    // A click outside the basket closes it
     if (!event.target.closest('.basket') && !event.target.closest('.header__user-btn--basket')) {
       toggleBasket(false);
     }
@@ -51,7 +51,7 @@ export function initBasket() {
 
     if (!btn) return;
 
-    // Список перерисовывается, поэтому клик не должен дойти до обработчика «клик мимо корзины»
+    // The list is re-rendered, so the click must not reach the outside-click handler
     event.stopPropagation();
 
     const id = Number(btn.closest('[data-id]').dataset.id);
@@ -115,14 +115,14 @@ function createItemMarkup({ product, quantity }) {
         <span class="basket__name">${name}</span>
         <div class="basket__counter">
           <button class="basket__counter-btn" type="button" data-action="decrease"
-                  aria-label="Уменьшить количество">−</button>
-          <span class="basket__count" aria-label="Количество">${quantity}</span>
+                  aria-label="Decrease quantity">−</button>
+          <span class="basket__count" aria-label="Quantity">${quantity}</span>
           <button class="basket__counter-btn" type="button" data-action="increase"
-                  aria-label="Увеличить количество">+</button>
+                  aria-label="Increase quantity">+</button>
         </div>
       </div>
       <span class="basket__price">${formatPrice(product.price.new * quantity)}</span>
-      <button class="basket__close" type="button" data-action="remove" aria-label="Удалить товар: ${name}">
+      <button class="basket__close" type="button" data-action="remove" aria-label="Remove item: ${name}">
         <svg width="24" height="24" aria-hidden="true">
           <use href="images/sprite.svg#icon-close"></use>
         </svg>
@@ -142,8 +142,8 @@ function loadBasket() {
 
   const quantities = new Map();
 
-  // Раньше в хранилище лежали товары целиком, по одной записи на каждую штуку.
-  // Сворачиваем любой из форматов в количество по id и отбрасываем товары, которых уже нет в каталоге.
+  // Older versions stored whole products, one entry per unit.
+  // Either format is collapsed into a quantity per id; products missing from the catalog are dropped.
   saved.forEach((entry) => {
     const id = Number(entry?.id);
     const quantity = Number(entry?.quantity ?? 1);

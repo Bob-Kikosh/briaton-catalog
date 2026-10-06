@@ -1,10 +1,14 @@
-const priceFormatter = new Intl.NumberFormat('ru-RU');
+const priceFormatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  maximumFractionDigits: 0,
+});
 
 export function formatPrice(value) {
-  return `${priceFormatter.format(value)} ₽`;
+  return priceFormatter.format(value);
 }
 
-// Данные о товарах вставляются в разметку строкой, поэтому спецсимволы нужно экранировать
+// Product data is inserted into markup as a string, so special characters must be escaped
 export function escapeHtml(value) {
   return String(value)
     .replaceAll('&', '&amp;')
@@ -14,8 +18,8 @@ export function escapeHtml(value) {
     .replaceAll("'", '&#39;');
 }
 
-// localStorage может быть недоступен (приватный режим, запрет в настройках),
-// поэтому любое обращение к нему не должно ломать страницу
+// localStorage may be unavailable (private mode, blocked in settings),
+// so no access to it should ever break the page
 export function readStorage(key, fallback) {
   try {
     const saved = localStorage.getItem(key);
@@ -30,6 +34,6 @@ export function writeStorage(key, value) {
   try {
     localStorage.setItem(key, JSON.stringify(value));
   } catch {
-    // Сохранить не получилось — работаем дальше без сохранения
+    // Saving failed — keep working without persistence
   }
 }

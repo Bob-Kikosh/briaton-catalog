@@ -28,14 +28,14 @@ export function initCatalog() {
   renderCatalog();
 }
 
-// Отфильтрованный и отсортированный список без разбивки на страницы
+// Filtered and sorted list before pagination
 function getVisibleProducts() {
   const { filters, sort, city } = getState();
 
   return getProducts()
     .filter((item) => {
       const matchesType = !filters.types.length || item.type.some((type) => filters.types.includes(type));
-      // «В наличии» проверяем для города, выбранного в шапке
+      // "In stock" is checked for the city selected in the header
       const matchesStatus = filters.status !== 'instock' || item.availability[city] > 0;
 
       return matchesType && matchesStatus;
@@ -49,7 +49,7 @@ export function renderCatalog() {
   const products = getVisibleProducts();
   const totalPages = Math.ceil(products.length / PER_PAGE);
 
-  // После смены фильтров текущей страницы может уже не существовать
+  // After a filter change the current page may no longer exist
   if (getState().page > totalPages) {
     setPage(Math.max(totalPages, 1));
   }
@@ -63,7 +63,7 @@ export function renderCatalog() {
       .map((item) => `<li class="catalog__item">${createCardMarkup(item)}</li>`)
       .join('');
   } else {
-    showCatalogMessage('По выбранным фильтрам ничего не найдено');
+    showCatalogMessage('No products match the selected filters');
   }
 
   initTippy(list);

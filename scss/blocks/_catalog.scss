@@ -78,7 +78,7 @@
     }
   }
 
-  // Сообщение на месте списка: ничего не найдено или ошибка загрузки
+  // Message shown in place of the list: nothing found or a loading error
   &__empty {
     grid-column: 1 / -1;
     padding: 60px 0;

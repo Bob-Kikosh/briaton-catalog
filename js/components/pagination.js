@@ -15,14 +15,14 @@ export function renderPagination(totalPages, currentPage) {
     return `
       <li class="catalog__pagination-item">
         <button class="catalog__pagination-link${isCurrent ? ' catalog__pagination-link--active' : ''}"
-                type="button" data-page="${page}" aria-label="Страница ${page}"
+                type="button" data-page="${page}" aria-label="Page ${page}"
                 ${isCurrent ? 'aria-current="page"' : ''}>${page}</button>
       </li>
     `;
   }).join('');
 }
 
-// Один обработчик на весь список вместо обработчика на каждой кнопке
+// One handler for the whole list instead of one per button
 export function initPagination(onChange) {
   if (!pagination) return;
 

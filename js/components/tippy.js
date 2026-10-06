@@ -1,4 +1,4 @@
-// Подсказки, созданные для каждого контейнера: при перерисовке списка старые нужно удалять
+// Tooltips created per container: old ones must be destroyed when the list is re-rendered
 const instancesByRoot = new WeakMap();
 
 export function initTippy(root = document) {

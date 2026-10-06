@@ -1,7 +1,5 @@
 # Briaton — lighting store catalog
 
-**English** | [Русский](README.ru.md)
-
 A catalog page for an online lighting store. Products are loaded from JSON and can be filtered, sorted, paginated and added to a cart. Built with vanilla JavaScript, no frameworks.
 
 **[Live demo](https://bob-kikosh.github.io/briaton-catalog/)**
@@ -9,8 +7,6 @@ A catalog page for an online lighting store. Products are loaded from JSON and c
 ![Catalog on desktop](docs/desktop.png)
 
 <img src="docs/mobile.png" alt="Catalog on mobile" width="320">
-
-> The interface text is in Russian: the project was built from a Russian-language design mockup.
 
 ## Features
 

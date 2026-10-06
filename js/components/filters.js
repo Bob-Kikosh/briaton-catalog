@@ -8,7 +8,7 @@ export function initFilters(onChange) {
 
   updateFilterCounts(form);
 
-  // Браузер может восстановить отмеченные поля после перезагрузки — берём значения из формы
+  // The browser may restore checked fields after a reload, so values are read from the form
   setFilters(readFilters(form));
 
   form.addEventListener('change', () => {
@@ -16,7 +16,7 @@ export function initFilters(onChange) {
     onChange();
   });
 
-  // Кнопка «Сбросить фильтры» очищает поля сама, остаётся сбросить состояние
+  // The reset button clears the fields itself; only the state is left to reset
   form.addEventListener('reset', () => {
     resetFilters();
     onChange();
@@ -32,7 +32,7 @@ function readFilters(form) {
   };
 }
 
-// Количество товаров каждого типа рядом с чекбоксом
+// Number of products of each type next to its checkbox
 function updateFilterCounts(form) {
   const counts = {};
 

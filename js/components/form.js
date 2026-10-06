@@ -1,4 +1,4 @@
-// Учебный адрес-заглушка: принимает запрос и возвращает его содержимое
+// Test endpoint: accepts the request and echoes its contents back
 const FORM_URL = 'https://httpbin.org/post';
 
 export function initForm() {
@@ -13,37 +13,37 @@ export function initForm() {
     .addField('#name', [
       {
         rule: 'required',
-        errorMessage: 'Введите имя',
+        errorMessage: 'Enter your name',
       },
       {
         rule: 'minLength',
         value: 3,
-        errorMessage: 'Минимум 3 символа',
+        errorMessage: 'At least 3 characters',
       },
       {
         rule: 'maxLength',
         value: 20,
-        errorMessage: 'Максимум 20 символов',
+        errorMessage: 'No more than 20 characters',
       },
     ])
     .addField('#email', [
       {
         rule: 'required',
-        errorMessage: 'Введите email',
+        errorMessage: 'Enter your email',
       },
       {
         rule: 'email',
-        errorMessage: 'Некорректный email',
+        errorMessage: 'Invalid email',
       },
     ])
     .addField('#agree', [
       {
         rule: 'required',
-        errorMessage: 'Подтвердите согласие',
+        errorMessage: 'Please confirm your consent',
       },
     ])
     .onSuccess(async () => {
-      // Блокируем кнопку, чтобы заявка не ушла дважды
+      // The button is disabled so the request is not sent twice
       submitBtn.disabled = true;
 
       try {
@@ -52,15 +52,15 @@ export function initForm() {
           body: new FormData(form),
         });
 
-        if (!response.ok) throw new Error(`Ошибка отправки: ${response.status}`);
+        if (!response.ok) throw new Error(`Request failed: ${response.status}`);
 
-        showMessage('Заявка успешно отправлена');
+        showMessage('Your request has been sent');
 
         form.reset();
         validator.refresh();
       } catch (error) {
         console.error(error);
-        showMessage('Не удалось отправить заявку. Попробуйте ещё раз');
+        showMessage('Failed to send the request. Please try again');
       } finally {
         submitBtn.disabled = false;
       }
@@ -74,12 +74,12 @@ function showMessage(text) {
   message.classList.add('message');
   message.setAttribute('role', 'alertdialog');
   message.setAttribute('aria-modal', 'true');
-  message.setAttribute('aria-label', 'Сообщение');
+  message.setAttribute('aria-label', 'Message');
 
   message.innerHTML = `
     <div class="message__content">
       <p class="message__text"></p>
-      <button class="message__close" type="button" aria-label="Закрыть">
+      <button class="message__close" type="button" aria-label="Close">
         <svg width="24" height="24" aria-hidden="true">
           <use href="images/sprite.svg#icon-close"></use>
         </svg>
@@ -101,7 +101,7 @@ function showMessage(text) {
   }
 
   message.addEventListener('click', (event) => {
-    // Закрываем по кнопке и по клику на затемнение
+    // Closes on the button and on a backdrop click
     if (event.target === message || event.target.closest('.message__close')) closeMessage();
   });
 

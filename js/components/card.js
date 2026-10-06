@@ -6,8 +6,8 @@ const IMAGE_SIZES = {
   small: { width: 290, height: 344 },
 };
 
-// Одна разметка карточки для каталога и для слайдера «Товары дня».
-// small — уменьшенная карточка, headingTag — уровень заголовка в нужном разделе.
+// One card markup for both the catalog and the "Deals of the day" slider.
+// small — compact card, headingTag — heading level that fits the section.
 export function createCardMarkup(item, { small = false, headingTag = 'h2' } = {}) {
   const size = small ? IMAGE_SIZES.small : IMAGE_SIZES.default;
   const name = escapeHtml(item.name);
@@ -19,13 +19,13 @@ export function createCardMarkup(item, { small = false, headingTag = 'h2' } = {}
              alt="${name}" loading="lazy">
         <div class="product-card__more">
           <button class="product-card__link btn btn--icon" type="button" data-basket-add="${item.id}">
-            <span class="btn__text">В корзину</span>
+            <span class="btn__text">Add to cart</span>
             <svg width="24" height="24" aria-hidden="true">
               <use href="images/sprite.svg#icon-basket"></use>
             </svg>
           </button>
           <a href="#" class="product-card__link btn btn--secondary">
-            <span class="btn__text">Подробнее</span>
+            <span class="btn__text">Details</span>
           </a>
         </div>
       </div>
@@ -34,7 +34,7 @@ export function createCardMarkup(item, { small = false, headingTag = 'h2' } = {}
         ${item.price.old ? `<span class="product-card__old">${formatPrice(item.price.old)}</span>` : ''}
         <span class="product-card__price">${formatPrice(item.price.new)}</span>
         <div class="product-card__tooltip tooltip">
-          <button class="tooltip__btn" type="button" aria-label="Показать наличие по городам">
+          <button class="tooltip__btn" type="button" aria-label="Show stock by city">
             <svg class="tooltip__icon" width="5" height="10" aria-hidden="true">
               <use href="images/sprite.svg#icon-i"></use>
             </svg>
@@ -60,7 +60,7 @@ function createAvailabilityMarkup(availability) {
     .join('');
 
   return `
-    <span class="tooltip__text">Наличие товара по городам:</span>
+    <span class="tooltip__text">Stock by city:</span>
     <ul class="tooltip__list">${items}</ul>
   `;
 }

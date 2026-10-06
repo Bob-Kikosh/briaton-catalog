@@ -12,7 +12,7 @@ export function initAccordion() {
     btn.addEventListener('click', () => {
       const isActive = btn.classList.contains('accordion__btn--active');
 
-      // Открытым остаётся только один вопрос
+      // Only one question stays open at a time
       buttons.forEach((other) => setActive(other, false));
 
       setActive(btn, !isActive);

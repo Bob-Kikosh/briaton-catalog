@@ -6,7 +6,7 @@ export async function loadProducts() {
   const response = await fetch(DATA_URL);
 
   if (!response.ok) {
-    throw new Error(`Не удалось загрузить товары: ${response.status}`);
+    throw new Error(`Failed to load products: ${response.status}`);
   }
 
   products = await response.json();

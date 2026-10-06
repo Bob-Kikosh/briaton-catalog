@@ -49,7 +49,7 @@
       width: 190px;
     }
 
-    // На телефоне декоративной лампе не хватает места
+    // On mobile there is no room for the decorative lamp
     @include vp-767 {
       display: none;
     }

@@ -11,7 +11,7 @@
     gap: 12px;
   }
 
-  // Карточка в слайдере: тянется на ширину слайда
+  // Card inside the slider: stretches to the slide width
   &--small {
     width: 100%;
 
@@ -77,7 +77,7 @@
     pointer-events: none;
     transition: opacity $transition;
 
-    // На сенсорных экранах наведения нет: кнопка «В корзину» видна всегда
+    // Touch screens have no hover, so the "Add to cart" button is always visible
     @media (hover: none) {
       background-color: transparent;
       justify-content: flex-end;

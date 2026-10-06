@@ -10,7 +10,7 @@ import { initSlider } from './components/slider.js';
 import { initSort } from './components/sort.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
-  // Всё, что не зависит от товаров, запускаем сразу
+  // Everything that does not depend on products starts right away
   initBurger();
   initAccordion();
   initForm();
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadProducts();
   } catch (error) {
     console.error(error);
-    showCatalogMessage('Не удалось загрузить товары. Обновите страницу');
+    showCatalogMessage('Failed to load products. Please refresh the page');
     return;
   }
 

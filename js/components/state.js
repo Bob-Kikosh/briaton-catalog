@@ -3,12 +3,12 @@ import { readStorage, writeStorage } from './utils.js';
 const CITY_KEY = 'briaton-city';
 
 export const CITIES = {
-  moscow: 'Москва',
-  orenburg: 'Оренбург',
-  saintPetersburg: 'Санкт-Петербург',
+  newYork: 'New York',
+  chicago: 'Chicago',
+  losAngeles: 'Los Angeles',
 };
 
-const DEFAULT_CITY = 'orenburg';
+const DEFAULT_CITY = 'chicago';
 const DEFAULT_FILTERS = {
   types: [],
   status: 'all-item',
@@ -20,7 +20,7 @@ function loadCity() {
   return saved in CITIES ? saved : DEFAULT_CITY;
 }
 
-// Единое состояние каталога: всё, от чего зависит список товаров на странице
+// Single catalog state: everything the product list on the page depends on
 const state = {
   filters: { ...DEFAULT_FILTERS },
   sort: 'price-min',
@@ -36,7 +36,7 @@ export function setPage(page) {
   state.page = page;
 }
 
-// Любое изменение выборки возвращает на первую страницу
+// Any change to the selection returns to the first page
 export function setFilters(newFilters) {
   state.filters = { ...state.filters, ...newFilters };
   state.page = 1;

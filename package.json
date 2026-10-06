@@ -1,7 +1,7 @@
 {
   "name": "briaton-catalog",
   "version": "1.0.0",
-  "description": "Страница каталога интернет-магазина светильников Briaton: фильтры, сортировка, пагинация и корзина на чистом JavaScript",
+  "description": "Briaton lighting store catalog page: filters, sorting, pagination and cart in vanilla JavaScript",
   "private": true,
   "type": "module",
   "scripts": {

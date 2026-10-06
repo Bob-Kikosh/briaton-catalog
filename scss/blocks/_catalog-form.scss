@@ -8,7 +8,7 @@
   position: sticky;
   top: 20px;
 
-  // Когда фильтры встают над списком, прилипание только мешает
+  // Once the filters sit above the list, sticking only gets in the way
   @include vp-1023 {
     position: static;
     gap: 24px;

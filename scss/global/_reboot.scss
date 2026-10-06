@@ -20,7 +20,7 @@ body {
   color: $color-black;
   background-color: $color-white;
 
-  // Блокировка прокрутки под открытым меню и модальным окном
+  // Scroll lock under an open menu or modal
   &.no-scroll {
     overflow: hidden;
   }

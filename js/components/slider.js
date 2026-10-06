@@ -22,7 +22,7 @@ export function initSlider() {
     slidesPerView: 1.2,
     spaceBetween: 12,
 
-    // Количество карточек подстраивается под ширину экрана
+    // The number of visible cards adapts to the screen width
     breakpoints: {
       480: { slidesPerView: 2, spaceBetween: 16 },
       768: { slidesPerView: 3, spaceBetween: 20 },

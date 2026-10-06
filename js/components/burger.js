@@ -10,14 +10,14 @@ export function initBurger() {
     document.body.classList.toggle('no-scroll', isOpen);
     openBtn.setAttribute('aria-expanded', String(isOpen));
 
-    // Фокус переходит в меню при открытии и возвращается на кнопку при закрытии
+    // Focus moves into the menu on open and back to the button on close
     (isOpen ? closeBtn : openBtn).focus();
   };
 
   openBtn.addEventListener('click', () => toggleMenu(true));
   closeBtn.addEventListener('click', () => toggleMenu(false));
 
-  // Клик по затемнению вокруг панели
+  // A click on the backdrop around the panel
   menu.addEventListener('click', (event) => {
     if (event.target === menu) toggleMenu(false);
   });

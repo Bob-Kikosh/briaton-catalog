@@ -16,7 +16,7 @@
     }
   }
 
-  // Само поле скрыто, поэтому фокус с клавиатуры показываем на нарисованном квадрате
+  // The input itself is hidden, so keyboard focus is shown on the drawn box
   &__field:focus-visible {
     + #{$root}__label::before {
       outline: 2px solid $color-fern;

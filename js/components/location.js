@@ -36,7 +36,7 @@ export function initLocation(onChange) {
       toggleList(false);
       btn.focus();
 
-      // От города зависит фильтр «В наличии»
+      // The "In stock" filter depends on the city
       onChange();
     });
   });

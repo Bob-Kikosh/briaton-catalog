@@ -5,7 +5,7 @@ export function initSort(onChange) {
 
   if (!select) return;
 
-  // Браузер может восстановить значение поля после перезагрузки — синхронизируем с состоянием
+  // The browser may restore the field value after a reload, so it is synced with the state
   select.value = getState().sort;
 
   select.addEventListener('change', () => {

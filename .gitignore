@@ -1,11 +1,11 @@
 node_modules
 
-# Системные файлы и настройки редакторов
+# System files and editor settings
 .DS_Store
 Thumbs.db
 .idea
 .vscode
 .claude
 
-# Логи
+# Logs
 *.log
